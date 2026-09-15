@@ -16,7 +16,8 @@
     .brand { position:relative; z-index:1; font:800 14px Outfit,sans-serif; letter-spacing:.8px; color:#2162df; }
     h1 { position:relative; z-index:1; margin:15px 0 13px; font-size:clamp(31px,5.2vw,49px); letter-spacing:-3px; line-height:1.25; }
     p { position:relative; z-index:1; margin:0; color:#62718e; font-size:15px; line-height:1.8; letter-spacing:-.4px; max-width:560px; }
-    .card { position:relative; z-index:1; display:block; color:inherit; text-decoration:none; border:1px solid #ccdcf8; background:linear-gradient(120deg,#f5f9ff,#fff); border-radius:16px; padding:23px 24px; margin-top:30px; transition:transform .2s ease, box-shadow .2s ease; }
+    .regions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; margin-top:30px; }
+    .card { position:relative; z-index:1; display:block; color:inherit; text-decoration:none; border:1px solid #ccdcf8; background:linear-gradient(120deg,#f5f9ff,#fff); border-radius:16px; padding:23px 24px; margin-top:0; transition:transform .2s ease, box-shadow .2s ease; }
     .card:hover { transform:translateY(-4px); box-shadow:0 15px 27px rgba(40,88,173,.15); }
     .label { color:#2162df; font:800 11px Outfit,sans-serif; letter-spacing:1.2px; }
     .card h2 { margin:7px 0 8px; font-size:23px; letter-spacing:-1.5px; }
@@ -25,6 +26,7 @@
     .btn { border-radius:9px; background:#1e5ed7; color:#fff; padding:12px 15px; font-size:13px; font-weight:800; text-decoration:none; transition:transform .18s ease; }
     .btn:hover { transform:translateY(-2px); }
     .btn.alt { color:#142b58; background:#eaf1ff; }
+    @media (max-width:600px) { .regions { grid-template-columns:1fr; } }
     footer { position:relative; z-index:1; margin-top:28px; padding-top:18px; border-top:1px solid #e7edf8; font-size:11px; color:#8490a8; }
   </style>
 </head>
@@ -33,11 +35,18 @@
     <div class="brand">ELYSIA GIFT · REGIONAL GUIDE</div>
     <h1>지역별 판촉물 제작<br>안내를 확인하세요.</h1>
     <p>기업·제조업체·관공서·학교의 행사 목적과 수량에 맞춰 판촉물 제작 정보를 정리했습니다. 실제 제품 사양과 인쇄 가능 여부는 상담 후 확인됩니다.</p>
-    <a class="card" href="https://junhyun3421-code.github.io/hwaseong-panchokmul/">
-      <div class="label">HWASEONG</div>
-      <h2>화성판촉물 제작 안내</h2>
-      <span>화성 산업단지·제조업체·기업·기관 맞춤 판촉물 보기 →</span>
-    </a>
+    <div class="regions">
+      <a class="card" href="https://junhyun3421-code.github.io/hwaseong-panchokmul/">
+        <div class="label">HWASEONG</div>
+        <h2>화성판촉물 제작 안내</h2>
+        <span>화성 산업단지·제조업체·기업·기관 맞춤 판촉물 보기 →</span>
+      </a>
+      <a class="card" href="https://junhyun3421-code.github.io/incheon-panchokmul/">
+        <div class="label">INCHEON</div>
+        <h2>인천판촉물 제작 안내</h2>
+        <span>인천 기업·기관·학교 행사 맞춤 판촉물 보기 →</span>
+      </a>
+    </div>
     <div class="cta">
       <a class="btn" href="https://kkr87.com/" target="_blank" rel="noreferrer">판촉물 상품몰 보기 ↗</a>
       <a class="btn alt" href="https://pf.kakao.com/_BxdSQn/" target="_blank" rel="noreferrer">카카오톡 상담 ↗</a>
